@@ -21,13 +21,6 @@
 *.json
 *.whl
 
-#classification
-configs/
-mmcls/
-fangweisui_test_classification.py
-fangweisui_test_mmclassification.py
-ckpts/
-model_res.py
 
 #fangweisui
 fangweisui_test.py
@@ -43,16 +36,9 @@ train.txt
 
 storage.googleapis.com
 runs/*
-data/*
-!data/images/zidane.jpg
-!data/images/bus.jpg
-!data/coco.names
-!data/coco_paper.names
-!data/coco.data
-!data/coco_*.data
-!data/coco_*.txt
-!data/trainvalno5k.shapes
-!data/*.sh
+data/images
+data/labels
+data/*.cache
 
 pycocotools/*
 results*.txt
