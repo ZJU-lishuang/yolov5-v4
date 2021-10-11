@@ -266,7 +266,7 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
     imgsz, imgsz_test = [check_img_size(x, gs) for x in opt.img_size]  # verify imgsz are gs-multiples
 
     # TODO 将cfg添加到配置变量中
-    cfg_model = Darknet('cfg/yolov5s_v4.cfg', (opt.img_size[0], opt.img_size[0])).to(device)
+    cfg_model = Darknet('cfg/yolov5s_v4_hand.cfg', (opt.img_size[0], opt.img_size[0])).to(device)
     # cfg_model = Darknet('cfg/yolov5s_v3.cfg', (416, 416)).to(device)
     copy_weight_v4(model, cfg_model)
     # 剪枝操作  sr开启稀疏训练  prune 不同的剪枝策略
